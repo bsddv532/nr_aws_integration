@@ -20,7 +20,7 @@ provider "aws" {
 
 # Configure the New Relic provider
 provider "newrelic" {
-  account_id = 3628623
+  account_id = ${var.newrelic_account_id} 
   api_key    = "NRAK-HS818W5YYIUP2OI9TB4CJ0RVGEN" # Usually prefixed with 'NRAK'
   region     = "US"                               # Valid regions are US and EU
 }
