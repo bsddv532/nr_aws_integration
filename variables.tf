@@ -4,7 +4,7 @@ variable "newrelic_account_id" {
 
 variable "newrelic_account_region" {
   type    = string
-#   default = "US"
+  default = "US"
 
   validation {
     condition     = contains(["US", "EU"], var.newrelic_account_region)
@@ -14,5 +14,5 @@ variable "newrelic_account_region" {
 
 variable "name" {
   type    = string
-#   default = "DemoIntegration"
+  default = "DemoIntegration"
 }
