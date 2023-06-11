@@ -1,6 +1,6 @@
-newrelic_account_id = "<Account_ID>"
+newrelic_account_id = "3628623"
 
 newrelic_account_region = "US"
 
-name = "Metrics-Stream"
+name = "demo"
 
