@@ -39,8 +39,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan -var-file=terraform.tfvars newrelic_account_id=${{ NEWRELIC_ACCOUNT_ID }}
-#       run: terraform plan -var-file=variables.tfvars with: NEWRELIC_ACCOUNT_ID=${NEWRELIC_ACCOUNT_ID}
+      run: terraform plan -var-file=terraform.tfvars newrelic_account_id=${{ env.NEWRELIC_ACCOUNT_ID }}
       
     - name: Terraform plan status
       if: steps.plan.outcome == 'failure'
