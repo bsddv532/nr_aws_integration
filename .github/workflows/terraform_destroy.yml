@@ -31,4 +31,4 @@ jobs:
     - name: Terraform destroy
       id: destroy
       if: steps.plan.outcome != 'failure'
-      run: terraform destroy -auto-approve
+      run: terraform destroy -auto-approve -input=false
