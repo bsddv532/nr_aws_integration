@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "random_name"
-    key    = "finalterraform.tfstate"
+    bucket = "demobucket11062023"
+    key    = "terraform.tfstate"
     region = "us-east-1"
     # dynamodb_table = "dk3008"
   }
