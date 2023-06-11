@@ -17,6 +17,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 #       AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
       AWS_DEFAULT_REGION: us-east-1
+      NEWRELIC_ACCOUNT_ID : ${{ secrets.NEWRELIC_ACCOUNT_ID }}
 
     steps:
     - name: Checkout
@@ -38,7 +39,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan -var-file=terraform.tfvars newrelic_account_id=${{ secrets.NEWRELIC_ACCOUNT_ID }}
+      run: terraform plan -var-file=terraform.tfvars newrelic_account_id=${{ NEWRELIC_ACCOUNT_ID }}
 #       run: terraform plan -var-file=variables.tfvars with: NEWRELIC_ACCOUNT_ID=${NEWRELIC_ACCOUNT_ID}
       
     - name: Terraform plan status
